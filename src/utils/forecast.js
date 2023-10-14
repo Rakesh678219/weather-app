@@ -25,7 +25,7 @@ const forecast = (place, callback) => {
           const data = body.current;
           callback(
             undefined,
-            `${location} -> ${data.weather_descriptions?.[0]}, it is currently ${data.temperature} degrees out there feels like ${data.feelslike} degrees`,
+            `${location} -> ${data.weather_descriptions?.[0]}, it is currently ${data.temperature} degrees out there feels like ${data.feelslike} degrees out . The humidity is ${data.humidity} %`,
             location
           );
         }
