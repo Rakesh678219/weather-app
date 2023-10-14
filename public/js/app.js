@@ -5,7 +5,7 @@ console.log("Client side javascript is loaded");
 const getWeather = (place) => {
   messageOne.textContent = "Loading...";
   messageTwo.textContent = "";
-  fetch(`http://localhost:3000/weather?address=${place}`).then((res) => {
+  fetch(`/weather?address=${place}`).then((res) => {
     res.json().then((data) => {
       if (data.error) {
         messageOne.textContent = data.error;
